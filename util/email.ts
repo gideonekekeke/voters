@@ -57,8 +57,11 @@ export const verifiedUser = async (
 		const myTransporter = nodemailer.createTransport({
 			service: "gmail",
 			auth: {
-				user: "Shotkode123@gmail.com",
-				pass: "sfclnmvbtajhaals",
+				// user: "Shotkode123@gmail.com",
+				// pass: "sfclnmvbtajhaals",
+
+				user: "Gideonekeke64@gmail.com",
+				pass: "sgczftichnkcqksx",
 			},
 		});
 		const buildFile = path.join(__dirname, "../views/AccountCreated.ejs");
@@ -103,10 +106,10 @@ export const verifiedByAdmin = async (generateToken: iData) => {
 		const myTransporter = nodemailer.createTransport({
 			service: "gmail",
 			auth: {
-				// user: "Gideonekeke64@gmail.com",
-				// pass: "sgczftichnkcqksx",
-				user: "Shotkode123@gmail.com",
-				pass: "sfclnmvbtajhaals",
+				user: "Gideonekeke64@gmail.com",
+				pass: "sgczftichnkcqksx",
+				// user: "Shotkode123@gmail.com",
+				// pass: "sfclnmvbtajhaals",
 			},
 		});
 
