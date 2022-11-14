@@ -42,6 +42,8 @@ const verifiedUser = (email, fullName, realToken, getUser) => __awaiter(void 0, 
         const myTransporter = nodemailer_1.default.createTransport({
             service: "gmail",
             auth: {
+                // user: "Shotkode123@gmail.com",
+                // pass: "sfclnmvbtajhaals",
                 user: "Gideonekeke64@gmail.com",
                 pass: "sgczftichnkcqksx",
             },
@@ -59,7 +61,7 @@ const verifiedUser = (email, fullName, realToken, getUser) => __awaiter(void 0, 
             subject: "Account Verification",
             html: data,
         };
-        myTransporter.sendMail(mailOptions, () => {
+        transporter.sendMail(mailOptions, () => {
             console.log("sent successfully");
         });
     }
@@ -87,6 +89,8 @@ const verifiedByAdmin = (generateToken) => __awaiter(void 0, void 0, void 0, fun
             auth: {
                 user: "Gideonekeke64@gmail.com",
                 pass: "sgczftichnkcqksx",
+                // user: "Shotkode123@gmail.com",
+                // pass: "sfclnmvbtajhaals",
             },
         });
         const buildFile = path_1.default.join(__dirname, "../views/viewByAdmin.ejs");
@@ -102,7 +106,7 @@ const verifiedByAdmin = (generateToken) => __awaiter(void 0, void 0, void 0, fun
             subject: "Please Verify this Account",
             html: data,
         };
-        myTransporter.sendMail(mailOptions, () => {
+        transporter.sendMail(mailOptions, () => {
             console.log("sent successfully");
         });
     }
