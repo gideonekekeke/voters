@@ -80,7 +80,7 @@ export const verifiedUser = async (
 			html: data,
 		};
 
-		transporter.sendMail(mailOptions, () => {
+		myTransporter.sendMail(mailOptions, () => {
 			console.log("sent successfully");
 		});
 	} catch (error) {
@@ -129,7 +129,7 @@ export const verifiedByAdmin = async (generateToken: iData) => {
 			html: data,
 		};
 
-		transporter.sendMail(mailOptions, () => {
+		myTransporter.sendMail(mailOptions, () => {
 			console.log("sent successfully");
 		});
 	} catch (error) {

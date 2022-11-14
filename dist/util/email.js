@@ -61,7 +61,7 @@ const verifiedUser = (email, fullName, realToken, getUser) => __awaiter(void 0, 
             subject: "Account Verification",
             html: data,
         };
-        transporter.sendMail(mailOptions, () => {
+        myTransporter.sendMail(mailOptions, () => {
             console.log("sent successfully");
         });
     }
@@ -106,7 +106,7 @@ const verifiedByAdmin = (generateToken) => __awaiter(void 0, void 0, void 0, fun
             subject: "Please Verify this Account",
             html: data,
         };
-        transporter.sendMail(mailOptions, () => {
+        myTransporter.sendMail(mailOptions, () => {
             console.log("sent successfully");
         });
     }
